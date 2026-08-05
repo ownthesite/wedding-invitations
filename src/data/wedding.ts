@@ -77,7 +77,8 @@ export const wedding: Wedding = {
     hostName: "Mr. Ashraf N.A & Mrs. Misiriya Ashraf",
     hostAddress: "Nettaveli Parambu House, Elamakkara, Kaloor",
     hostLine: "Cordially invite your esteemed presence with family",
-    message: "on the auspicious occasion of the Wedding Reception of our beloved son",
+    message:
+      "on the auspicious occasion of the Wedding Reception of our beloved son",
     weds: "weds",
     timeNote: "Wedding Reception · Dinner served",
     closing: "Your presence and prayers are requested.",
@@ -88,7 +89,8 @@ export const wedding: Wedding = {
       title: "Wedding Reception",
       date: "Sunday, 06 September 2026",
       time: "6:30 PM – 9:30 PM",
-      description: "An evening of blessings, dinner and celebration with family and friends.",
+      description:
+        "An evening of blessings, dinner and celebration with family and friends.",
       location: "Little Flower Church Hall, Pottakkuzhy, Kaloor",
     },
   ],
@@ -174,8 +176,8 @@ export const wedding: Wedding = {
 
   music: {
     enabled: true,
-    src: "/music/weddding-theme.mp3",
-    title: "Ambient Wedding Melody",
+    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+    title: "Ambient wedding melody",
   },
 
   socials: {

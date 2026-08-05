@@ -7,7 +7,7 @@ import { CoupleSection } from "@/components/wedding/CoupleSection";
 import { Events } from "@/components/wedding/Events";
 import { Family } from "@/components/wedding/Family";
 import { Footer } from "@/components/wedding/Footer";
-// import { Gallery } from "@/components/wedding/Gallery";
+import { Gallery } from "@/components/wedding/Gallery";
 import { Hero } from "@/components/wedding/Hero";
 import { InvitationCard } from "@/components/wedding/InvitationCard";
 import { Loader } from "@/components/wedding/Loader";
@@ -75,7 +75,7 @@ function Index() {
         <Events />
         <Venue />
         <Family />
-        {/* <Gallery /> */}
+        <Gallery />
         <Timeline />
         <Rsvp />
       </main>
