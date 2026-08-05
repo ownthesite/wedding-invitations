@@ -176,7 +176,7 @@ export const wedding: Wedding = {
 
   music: {
     enabled: true,
-    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+    // src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
     title: "Ambient wedding melody",
   },
 

@@ -19,16 +19,20 @@ export function Hero() {
   return (
     <section ref={ref} className="relative h-dvh min-h-[620px] overflow-hidden" id="home">
       <motion.div className="absolute inset-0" style={{ y }}>
-        <img
-          src={photo}
-          alt={`${groom.fullName} and ${bride.fullName}`}
-          width={1280}
-          height={1600}
-          fetchPriority="high"
-          className="size-full object-cover object-[50%_35%]"
-        />
-        <div className="absolute inset-0 bg-linear-to-b from-maroon/50 via-maroon/25 to-maroon/75" />
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-maroon/85 via-maroon/45 to-transparent" />
+        {/* Base tint */}
+        <div className="absolute inset-0 bg-maroon/30" />
+
+        {/* Vertical gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-maroon/55 via-maroon/20 to-maroon/80" />
+
+        {/* Bottom fade for text */}
+        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-maroon/90 via-maroon/50 to-transparent" />
+
+        {/* Top vignette */}
+        <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-black/35 to-transparent" />
+
+        {/* Side vignette */}
+        <div className="absolute inset-0 bg-radial-[ellipse_at_center] from-transparent via-transparent to-black/30" />
       </motion.div>
 
       <Petals />
