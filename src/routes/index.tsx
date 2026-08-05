@@ -64,7 +64,6 @@ function Index() {
   return (
     <>
       <Loader onEnter={() => setEntered(true)} />
-      {entered && <Nav />}
       {entered && <MusicPlayer />}
       <main>
         <Hero />
@@ -76,7 +75,7 @@ function Index() {
         <Venue />
         <Family />
         {/* <Gallery /> */}
-       
+
       </main>
       <Footer />
     </>
