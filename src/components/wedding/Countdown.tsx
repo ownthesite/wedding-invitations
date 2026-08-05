@@ -61,7 +61,7 @@ export function Countdown() {
       <Reveal className="mx-auto max-w-3xl text-center">
         <Eyebrow>Counting the days</Eyebrow>
         <h2 className="font-display mt-3 text-3xl font-light text-maroon sm:text-4xl">
-          Until we say Qubool Hai
+          Until Our Nikah
         </h2>
         <Divider className="mt-6" />
 
