@@ -1,0 +1,304 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Wedding design system — printed-invitation palette.
+ * Cream / ivory / champagne / gold / wine / deep maroon / dark brown.
+ */
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-serif-caps: "Cinzel", Georgia, serif;
+  --font-body: "Lora", Georgia, serif;
+  --font-script: "Great Vibes", cursive;
+}
+
+/*
+ * Design system definition.
+ *
+ * The @theme inline block maps CSS custom properties to Tailwind utility
+ * classes (e.g. --color-primary -> bg-primary, text-primary).
+ *
+ * The :root and .dark blocks define the actual color values using oklch.
+ * All colors MUST use oklch format.
+ *
+ * To add a new semantic color:
+ * 1. Add the variable to :root (light value) and .dark (dark value)
+ * 2. Register it in @theme inline as --color-<name>: var(--<name>)
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-champagne: var(--champagne);
+  --color-ivory: var(--ivory);
+  --color-cream: var(--cream);
+  --color-beige: var(--beige);
+  --color-wine: var(--wine);
+  --color-maroon: var(--maroon);
+  --color-cocoa: var(--cocoa);
+}
+
+:root {
+  --radius: 0.25rem;
+
+  /* raw palette */
+  --cream: oklch(0.965 0.017 84);
+  --ivory: oklch(0.988 0.008 90);
+  --beige: oklch(0.925 0.024 82);
+  --champagne: oklch(0.885 0.043 82);
+  --gold: oklch(0.72 0.096 80);
+  --gold-soft: oklch(0.84 0.06 84);
+  --wine: oklch(0.4 0.115 20);
+  --maroon: oklch(0.31 0.093 22);
+  --cocoa: oklch(0.31 0.033 60);
+
+  /* semantic */
+  --background: var(--cream);
+  --foreground: var(--cocoa);
+  --card: var(--ivory);
+  --card-foreground: var(--cocoa);
+  --popover: var(--ivory);
+  --popover-foreground: var(--cocoa);
+  --primary: var(--maroon);
+  --primary-foreground: oklch(0.975 0.014 86);
+  --secondary: var(--champagne);
+  --secondary-foreground: var(--maroon);
+  --muted: var(--beige);
+  --muted-foreground: oklch(0.48 0.032 58);
+  --accent: var(--gold);
+  --accent-foreground: oklch(0.98 0.01 86);
+  --destructive: oklch(0.52 0.17 27);
+  --destructive-foreground: oklch(0.98 0.01 86);
+  --border: oklch(0.87 0.032 82);
+  --input: oklch(0.87 0.032 82);
+  --ring: var(--gold);
+
+  /* composite tokens */
+  --gradient-gold: linear-gradient(
+    100deg,
+    oklch(0.66 0.09 72) 0%,
+    oklch(0.86 0.075 88) 42%,
+    oklch(0.7 0.1 76) 100%
+  );
+  --gradient-page: linear-gradient(
+    180deg,
+    oklch(0.972 0.016 86) 0%,
+    oklch(0.952 0.024 82) 100%
+  );
+  --shadow-card: 0 24px 60px -32px oklch(0.31 0.093 22 / 0.35);
+  --shadow-lift: 0 32px 80px -40px oklch(0.31 0.093 22 / 0.45);
+  --ease-silk: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: var(--ivory);
+  --sidebar-foreground: var(--cocoa);
+  --sidebar-primary: var(--maroon);
+  --sidebar-primary-foreground: var(--ivory);
+  --sidebar-accent: var(--champagne);
+  --sidebar-accent-foreground: var(--maroon);
+  --sidebar-border: oklch(0.87 0.032 82);
+  --sidebar-ring: var(--gold);
+}
+
+.dark {
+  --background: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.984 0.003 247.858);
+  --card: oklch(0.208 0.042 265.755);
+  --card-foreground: oklch(0.984 0.003 247.858);
+  --popover: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.929 0.013 255.508);
+  --primary-foreground: oklch(0.208 0.042 265.755);
+  --secondary: oklch(0.279 0.041 260.031);
+  --secondary-foreground: oklch(0.984 0.003 247.858);
+  --muted: oklch(0.279 0.041 260.031);
+  --muted-foreground: oklch(0.704 0.04 256.788);
+  --accent: oklch(0.279 0.041 260.031);
+  --accent-foreground: oklch(0.984 0.003 247.858);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.551 0.027 264.364);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.208 0.042 265.755);
+  --sidebar-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.279 0.041 260.031);
+  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.551 0.027 264.364);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    background-image: var(--gradient-page);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+  }
+
+  section[id],
+  footer {
+    scroll-margin-top: 5rem;
+  }
+
+  ::selection {
+    background: var(--champagne);
+    color: var(--maroon);
+  }
+}
+
+/* ---- Utilities ---- */
+
+@utility text-gold-gradient {
+  background-image: var(--gradient-gold);
+  background-clip: text;
+  color: transparent;
+}
+
+@utility rule-gold {
+  background-image: var(--gradient-gold);
+  height: 1px;
+  width: 100%;
+}
+
+@utility tracking-luxe {
+  letter-spacing: 0.32em;
+}
+
+@utility card-invitation {
+  background: linear-gradient(
+    155deg,
+    oklch(0.993 0.006 92) 0%,
+    oklch(0.972 0.017 86) 55%,
+    oklch(0.955 0.028 82) 100%
+  );
+  box-shadow: var(--shadow-card);
+}
+
+@utility paper-grain {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.35;
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      oklch(0.72 0.096 80 / 0.14) 1px,
+      transparent 0
+    );
+    background-size: 7px 7px;
+  }
+}
+
+@keyframes float-petal {
+  0% {
+    transform: translate3d(0, -8vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.55;
+  }
+  90% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: translate3d(6vw, 108vh, 0) rotate(220deg);
+    opacity: 0;
+  }
+}
+
+@keyframes shimmer-line {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@utility animate-petal {
+  animation: float-petal linear infinite;
+}
+
+@utility animate-shimmer {
+  animation: shimmer-line 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
