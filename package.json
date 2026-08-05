@@ -3,6 +3,8 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
+
+  "packageManager": "pnpm@9.15.9",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -84,5 +86,7 @@
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.56.1",
     "vite": "^8.1.5"
+
   }
+
 }
