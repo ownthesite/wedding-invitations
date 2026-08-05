@@ -12,7 +12,6 @@ import { Hero } from "@/components/wedding/Hero";
 import { InvitationCard } from "@/components/wedding/InvitationCard";
 import { Loader } from "@/components/wedding/Loader";
 import { MusicPlayer } from "@/components/wedding/MusicPlayer";
-import { Nav } from "@/components/wedding/Nav";
 import { Rsvp } from "@/components/wedding/Rsvp";
 import { Timeline } from "@/components/wedding/Timeline";
 import { Venue } from "@/components/wedding/Venue";
