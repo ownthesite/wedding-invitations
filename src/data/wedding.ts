@@ -181,8 +181,8 @@ export const wedding: Wedding = {
   },
 
   socials: {
-    whatsapp: "https://wa.me/919000000000",
-    instagram: "https://instagram.com",
-    phone: "+91 90000 00000",
+    whatsapp: "https://wa.me/919995000728",
+    instagram: "https://www.instagram.com/az.lam_?igsh=MTI1NDVueWYwZHhkdA==",
+    phone: "+91 9995000728",
   },
 };

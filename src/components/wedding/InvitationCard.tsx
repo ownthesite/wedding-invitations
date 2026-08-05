@@ -29,7 +29,7 @@ export function InvitationCard() {
 
           <div className="relative z-10 text-center">
             <Monogram
-              left={couple.groom.name.charAt(0)}
+              left={couple.groom.name.charAt(9)}
               right={couple.bride.name.charAt(0)}
               className="mx-auto size-20"
             />

@@ -14,7 +14,7 @@ export function Footer() {
     <footer className="relative overflow-hidden border-t border-gold/25 bg-ivory/60 px-6 py-20 text-center">
       <Reveal>
         <Monogram
-          left={couple.groom.name.charAt(0)}
+          left={couple.groom.name.charAt(9)}
           right={couple.bride.name.charAt(0)}
           className="mx-auto size-20"
         />
