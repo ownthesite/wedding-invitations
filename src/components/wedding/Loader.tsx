@@ -39,7 +39,7 @@ export function Loader({ onEnter }: { onEnter: () => void }) {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
             >
-              <Monogram left={groom.name.charAt(0)} right={bride.name.charAt(0)} />
+              <Monogram left={groom.name.charAt(9)} right={bride.name.charAt(0)} />
             </motion.div>
 
             <motion.p
