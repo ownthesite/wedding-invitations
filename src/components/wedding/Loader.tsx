@@ -16,7 +16,11 @@ export function Loader({ onEnter }: { onEnter: () => void }) {
   }, []);
 
   const enter = () => {
-    setOpen(false);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // or "smooth"
+    });
+
     onEnter();
   };
 
