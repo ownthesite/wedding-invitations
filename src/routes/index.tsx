@@ -76,8 +76,7 @@ function Index() {
         <Venue />
         <Family />
         {/* <Gallery /> */}
-        <Timeline />
-        <Rsvp />
+       
       </main>
       <Footer />
     </>
