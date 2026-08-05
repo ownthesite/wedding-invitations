@@ -54,7 +54,7 @@ export function Loader({ onEnter }: { onEnter: () => void }) {
             <Divider className="mt-6 w-full" />
 
             <motion.p
-              className="font-serif-caps mt-6 text-[0.65rem] tracking-luxe text-muted-foreground uppercase"
+              className="font-serif-caps mt-6 text-[0.65rem] font-bold uppercase tracking-luxe text-muted-foreground"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.6 }}
